@@ -46,14 +46,14 @@
             Press submit to <em>Decode</em> the default value or enter your own data and submit!
           </p>
     <label for="string">Decode/Encode from base64</label>
-    <form id="base64" action="convert64()" method="post">
+    <form id="base64" action="" method="post">
         <textarea name="input" id="input" cols="40" rows="7" required autofocus>Y29uZ3JhdHVsYXRpb25zIQ==</textarea>
         <fieldset>
             <legend>Choose the option</legend>
-            <label for="encode">Decode</label>
-            <input type="radio" id="decode" name="choose" value="encode" checked>
-            <label for="decode">Encode</label>
-            <input type="radio" id="encode" name="choose" value="decode">
+            <label for="decode">Decode</label>
+            <input type="radio" id="decode" name="choose" value="decode" checked>
+            <label for="encode">Encode</label>
+            <input type="radio" id="encode" name="choose" value="encode">
             <button type="submit" onClick="convert64();return false;" value="SEND">Submit</button>
         </fieldset>
     </form>
@@ -116,10 +116,12 @@
             var input = document.getElementById('base64');
             var output = document.getElementById('output');
             var textArea = input[0].value;
-            var radio = //input[3].value;
-            
-            output.innerHTML = decode(textArea);
-           
+            var radio = input.elements.choose.value;
+            if(radio !== 'encode') {
+            	output.innerHTML = decode(textArea);
+            } else {
+            	output.innerHTML = encode(textArea);
+            }
 
         }
     </script>
