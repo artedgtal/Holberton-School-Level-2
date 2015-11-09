@@ -1,0 +1,141 @@
+body, main {
+    display:flex;
+    color:#fff;
+
+
+}
+body {
+    flex-direction: column;
+    background: url("https://dl.dropboxusercontent.com/s/d3yo9scq51x9gwr/programming-wallpaper-1680x1050.jpg") no-repeat center fixed;
+    min-height: 100%;
+    background-size: cover;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-shadow: 0 1px 3px rgba(0,0,0,.5);
+
+
+
+}
+main {
+    flex-direction: row;
+    flex:auto;
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+
+}
+h1,h2,h3 {
+        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+/*img {
+    transition: all 1s ease-in-out;
+}
+*/
+article {
+    flex:2;
+
+}
+
+aside {
+    flex:1;
+}
+article, aside {
+
+    overflow-y: auto;
+}
+
+header, footer {
+    position:fixed;
+    z-index: 1000;
+    overflow: hidden;
+    right:0;
+    left:0;
+    -webkit-box-shadow: 0px 6px 37px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 6px 37px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 6px 37px 2px rgba(0,0,0,0.75);
+    opacity:.9
+
+}
+
+header {
+    top:0;
+    /*background: url('https://dl.dropboxusercontent.com/s/d3yo9scq51x9gwr/programming-wallpaper-1680x1050.jpg') no-repeat center fixed;*/
+    background-color: #040522;
+    max-height: 50px;
+    border: 1px solid black;
+
+}
+
+footer {
+    bottom: 0;
+    /*background: url('https://dl.dropboxusercontent.com/s/d3yo9scq51x9gwr/programming-wallpaper-1680x1050.jpg') no-repeat center fixed;*/
+    background-color: #040522;
+}
+
+footer p {
+    margin-top:30px;
+    text-align: center;
+}
+.offscreen {
+    position: absolute;
+    clip: rect(1px 1px 1px 1px); /* for Internet Explorer */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+ li > a, p > a {
+    color:#fff;
+}
+p {
+    font-family: "medium-content-serif-font",Georgia,Cambria,"Times New Roman",Times,serif;
+    line-height: 1.58;
+    letter-spacing: -0.003em;
+    color:#bdf8f8
+
+}
+p {
+    font-family: courier;
+
+}
+footer img {
+    background-color: aqua;
+
+}
+#DoubleBass, #Canoe {
+    transform:scale(.8);
+    border:1px solid #0092f4;
+    transition: all .5s ease-in-out;
+}
+#DoubleBass:hover, #Canoe:hover {
+    transform:scale(1);
+}
+#logo {
+    /*float:left;
+    aposition:relative;
+    atop:-70px;
+    border-radius: 40%;*/
+    margin-right: 30px;
+    margin-left:10px;
+    transition: all 1s ease-in-out;
+
+}
+#logo:hover {
+    transform: rotateY(180deg);
+}
+.active {
+  border:2px solid #0092f4;
+  padding:10px;
+  border-radius: 20px;
+}
+textarea {
+  color: blue;
+  opacity:.6;
+  
+}
+nav> ul > li:hover {
+  transform(scale(1.1));
+  margin: 10px;
+}
