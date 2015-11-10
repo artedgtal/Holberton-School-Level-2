@@ -7,6 +7,19 @@
     <link href="css/styles.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="https://www.holbertonschool.com//assets/favicon-9a9a5a3f7b5b6a2b9ebc77b354aa257f9cf30c8199b3278cefcca90a65f9a399.ico" />
     <script src="js/behavior.js"></script>
+    <style type="text/css" media="screen">
+    #editor { 
+        
+        position: relative;
+        width: 100%;
+        min-width: 400px;
+        height:100%;
+        min-height: 500px;
+        opacity: ;
+        border: 2px solid #0092f4;
+        z-index: 1;
+    }
+</style>
 </head>
 <body class="works_on_smartphone">
 
@@ -32,45 +45,29 @@
                 <li><a href="#">Tweets</a></li>
                 <li><a href="#">Outside</a></li>
                 <li><a href="#">Music</a></li>
-                <li><a href="#" class="active">Base64</a></li>
-                <li><a href="js-editor.html">JS Editor</a></li>
-
+                <li><a href="index.html">Base64</a></li>
+                <li><a href="#" class="active">JS Editor</a></li>
+                
             </ul>
         </nav>
     </header>
     <main>
         <article id="main_content">
-          <h1>
-            Converter
-          </h1>
-          
-          <p>
-            Press submit to <em>Decode</em> the default value or enter your own data and submit!
-          </p>
-    <label for="string">Decode/Encode from base64</label>
-    <form id="base64" action="" method="post">
-        <textarea name="input" id="input" cols="60" rows="10" required autofocus>Y29uZ3JhdHVsYXRpb25zIQ==</textarea>
-        <fieldset>
-            <legend>Choose the option</legend>
-            <label for="decode">Decode</label>
-            <input type="radio" id="decode" name="choose" value="decode" checked>
-            <label for="encode">Encode</label>
-            <input type="radio" id="encode" name="choose" value="encode">
-            <button type="submit" onClick="convert64();return false;" value="SEND">Submit</button>
-        </fieldset>
-    </form>
-    <textarea name="output" id="output" cols="60" rows="6"></textarea>
-          <h2>
-            About
-          </h2>
-          <p>
-            Base64 is a group of similar binary-to-text encoding schemes that represent binary data in an ASCII string format by translating it into a radix-64 representation. The term Base64 originates from a specific MIME content transfer encoding.
-          </p>
-          <p>
-            The particular set of 64 characters chosen to represent the 64 place-values for the base varies between implementations. The general strategy is to choose 64 characters that are both members of a subset common to most encodings, and also printable. This combination leaves the data unlikely to be modified in transit through information systems, such as email, that were traditionally not 8-bit clean.[1] For example, MIME's Base64 implementation uses A–Z, a–z, and 0–9 for the first 62 values. Other variations share this property but differ in the symbols chosen for the last two values; an example is UTF-7.(Wikipedia)
-          </p>
-
-    
+         <h1>
+             Simple Javascript Editor
+         </h1>
+          <div class="outline">
+              <div id="editor">// The .bind method from Prototype.js 
+Function.prototype.bind = function(){ 
+  var fn = this, args = Array.prototype.slice.call(arguments), object = args.shift(); 
+  return function(){ 
+    return fn.apply(object, 
+      args.concat(Array.prototype.slice.call(arguments))); 
+  }; 
+};
+              
+               </div>
+          </div>
   </article>
         <aside>
            <h6 class="offscreen">Disqus</h6>
@@ -101,32 +98,12 @@
     <footer>
         <p>Made by <a href="https://twitter.com/dgtalsolutions" target="_blank">Alexandro Rodrigues de Oliveira</a> for <a href="https://www.holbertonschool.com" target="_blank"><img src="https://www.holbertonschool.com/holberton-logo.png" width="100" alt="Holberton School Logo"></a></p>
     </footer>
-      <script type="text/javascript">
-        function decode(s) {
-            return window.atob(s);
-        }
-
-        function encode(s) {
-            return window.btoa(s);
-        }
-
-        function convert64() {
-            
-         //======>  Under construction!!! <==========\\
-	//=====> Please, ignore the mess! ;-) <====== \\
-				
-            var input = document.getElementById('base64');
-            var output = document.getElementById('output');
-            var textArea = input[0].value;
-            var radio = input.elements.choose.value;
-            if(radio !== 'encode') {
-            	output.innerHTML = decode(textArea);
-            } else {
-            	output.innerHTML = encode(textArea);
-            }
-
-        }
-    </script>
+      <script src="https://cdn.jsdelivr.net/ace/1.2.1/noconflict/ace.js" charset="utf-8"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/cobalt");
+    editor.getSession().setMode("ace/mode/javascript");
+</script>
 
 </body>
 </html>

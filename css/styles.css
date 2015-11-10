@@ -27,10 +27,7 @@ h1,h2,h3 {
         font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-/*img {
-    transition: all 1s ease-in-out;
-}
-*/
+
 article {
     flex:2;
 
@@ -59,7 +56,6 @@ header, footer {
 
 header {
     top:0;
-    /*background: url('https://dl.dropboxusercontent.com/s/d3yo9scq51x9gwr/programming-wallpaper-1680x1050.jpg') no-repeat center fixed;*/
     background-color: #040522;
     max-height: 50px;
     border: 1px solid black;
@@ -68,7 +64,6 @@ header {
 
 footer {
     bottom: 0;
-    /*background: url('https://dl.dropboxusercontent.com/s/d3yo9scq51x9gwr/programming-wallpaper-1680x1050.jpg') no-repeat center fixed;*/
     background-color: #040522;
 }
 
@@ -113,10 +108,7 @@ footer img {
     transform:scale(1);
 }
 #logo {
-    /*float:left;
-    aposition:relative;
-    atop:-70px;
-    border-radius: 40%;*/
+
     margin-right: 30px;
     margin-left:10px;
     transition: all 1s ease-in-out;
@@ -138,4 +130,10 @@ textarea {
 nav> ul > li:hover {
   transform(scale(1.1));
   margin: 10px;
+}
+.outline {
+    padding: 15px 10px 5px 5px;
+    border: 1px solid white;
+    background-color:darkgrey;
+    z-index: -10;
 }
