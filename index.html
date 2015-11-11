@@ -101,12 +101,23 @@
         <p>Made by <a href="https://twitter.com/dgtalsolutions" target="_blank">Alexandro Rodrigues de Oliveira</a> for <a href="https://www.holbertonschool.com" target="_blank"><img src="https://www.holbertonschool.com/holberton-logo.png" width="100" alt="Holberton School Logo"></a></p>
     </footer>
       <script type="text/javascript">
+      
         function decode(s) {
+        	try {
             return window.atob(s);
+        	} catch(e){
+        		alert(e);
+        		
+        	}
         }
 
         function encode(s) {
+        	try {
             return window.btoa(s);
+        	} catch(e) {
+        		alert(e);
+        		
+        	}
         }
 
         function convert64() {
