@@ -1,5 +1,6 @@
 
-function errorMessage(o){
+
+         function errorMessage(o){
          	return o.toString().split(':')[2].slice(1)+'\nPlease, verify it and try again ;-)';
         }
       
