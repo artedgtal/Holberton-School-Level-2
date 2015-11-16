@@ -26,7 +26,7 @@
 // ==> Assigning the HTML5 Form DOM Objects to variables:
          var form = document.getElementById('form');
          var output = document.getElementById('output');
-         var input = document.getElementById('input');
+         var input = document.getElementById('input').value;
          var radio = form.elements.choose.value;
          
 // ==> The main statement:                 
