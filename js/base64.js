@@ -24,12 +24,13 @@
         }
         function convert64() {
 // ==> Assigning the HTML5 Form DOM Objects to variables:
-         var input = document.getElementById('base64');
+         var form = document.getElementById('form');
          var output = document.getElementById('output');
-         var textArea = input[0].value;
-         var radio = input.elements.choose.value;
-// ==> The statement:                 
-                 output.innerHTML = (radio !== 'encode') ? decode(textArea): encode(textArea);
+         var input = document.getElementById('input');
+         var radio = form.elements.choose.value;
+         
+// ==> The main statement:                 
+                 output.innerHTML = (radio !== 'encode') ? decode(input): encode(input);
 
 // ==> Old and tradicional toggle. Replaced by a more compact version:
          /*   if(radio !== 'encode') {
