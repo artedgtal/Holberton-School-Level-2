@@ -34,8 +34,8 @@
 
 // ==> Old and tradicional toggle. Replaced by a more compact version:
          /*   if(radio !== 'encode') {
-            	output.innerHTML = decode(textArea);
+            	output.innerHTML = decode(input);
             } else {
-            	output.innerHTML = encode(textArea);
+            	output.innerHTML = encode(input);
             }*/
         }
